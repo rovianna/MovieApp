@@ -17,12 +17,12 @@ class Movie {
     init(title: String, date: String, poster: String) {
         self.title = title
         self.date = date
-        self.poster = poster
+        self.poster = "https://image.tmdb.org/t/p/w185/\(poster)"
     }
     
     init(withJSON json: JSON) {
         self.title = json["title"].stringValue
         self.date = json["release_date"].stringValue
-        self.poster = json["poster_path"].stringValue
+        self.poster = "https://image.tmdb.org/t/p/w185\(json["poster_path"].stringValue)"
     }
 }
