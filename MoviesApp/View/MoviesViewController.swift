@@ -13,6 +13,7 @@ fileprivate let nib = UINib(nibName: "MovieTableViewCell", bundle: nil)
 class MoviesViewController: UIViewController {
 
     @IBOutlet weak var moviesTableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     private let moviePresenter = MoviePresenter(movieService: MovieRequester())
     private var movies = [Movie]()
@@ -23,25 +24,28 @@ class MoviesViewController: UIViewController {
         moviesTableView.dataSource = self
         moviePresenter.attachView(view: self)
         moviePresenter.getMovies()
+        activityIndicator.hidesWhenStopped = true
     }
 }
 
 extension MoviesViewController: MovieView {
     func startLoading() {
-        
+        activityIndicator.startAnimating()
+        self.view.bringSubview(toFront: activityIndicator)
     }
     
     func finishLoading() {
-        
+        activityIndicator.stopAnimating()
     }
     
     func setMovies(movies: [Movie]) {
         self.movies = movies
         moviesTableView.reloadData()
+        finishLoading()
     }
     
     func setEmptyMovies() {
-        
+        moviesTableView.isHidden = true
     }
 }
 
@@ -55,6 +59,4 @@ extension MoviesViewController: UITableViewDataSource {
         cell.configure(movie: movies[indexPath.row])
         return cell
     }
-    
-    
 }
