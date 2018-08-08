@@ -20,5 +20,4 @@ class MovieTableViewCell: UITableViewCell {
         releaseDateLabel.text = movie.date
         posterImageView.downloadImage(from: movie.poster)
     }
-    
 }
