@@ -47,7 +47,7 @@
                     <constraint firstItem="M9A-Nx-hDe" firstAttribute="leading" secondItem="oPk-ip-tVt" secondAttribute="leading" id="Af8-eu-fvR"/>
                     <constraint firstItem="FEy-nl-gSY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="E2C-tw-eMp"/>
                     <constraint firstItem="M9A-Nx-hDe" firstAttribute="leading" secondItem="FEy-nl-gSY" secondAttribute="trailing" constant="8" symbolic="YES" id="HLS-5m-44h"/>
-                    <constraint firstItem="oPk-ip-tVt" firstAttribute="top" secondItem="M9A-Nx-hDe" secondAttribute="bottom" constant="24" id="VjT-kf-5Xk"/>
+                    <constraint firstItem="oPk-ip-tVt" firstAttribute="top" relation="lessThanOrEqual" secondItem="M9A-Nx-hDe" secondAttribute="bottom" constant="24" id="VjT-kf-5Xk"/>
                     <constraint firstItem="FEy-nl-gSY" firstAttribute="bottom" secondItem="oPk-ip-tVt" secondAttribute="bottom" id="aAg-b2-Iv5"/>
                     <constraint firstItem="M9A-Nx-hDe" firstAttribute="trailing" secondItem="oPk-ip-tVt" secondAttribute="trailing" id="bVc-Hw-uXA"/>
                     <constraint firstItem="M9A-Nx-hDe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="eYU-Lp-jtQ"/>

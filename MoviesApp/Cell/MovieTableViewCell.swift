@@ -17,7 +17,7 @@ class MovieTableViewCell: UITableViewCell {
     
     func configure(movie: Movie) {
         titleMovieLabel.text = movie.title
-        releaseDateLabel.text = movie.date
+        releaseDateLabel.text = "Data de lançamento: \(movie.date.dateFormat)"
         posterImageView.downloadImage(from: movie.poster)
     }
 }
