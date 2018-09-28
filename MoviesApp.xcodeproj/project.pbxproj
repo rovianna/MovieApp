@@ -21,6 +21,7 @@
 		495F0846215E91AF0076D70A /* EmptyStateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 495F0845215E91AF0076D70A /* EmptyStateView.xib */; };
 		495F0848215E91CC0076D70A /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495F0847215E91CC0076D70A /* EmptyStateView.swift */; };
 		495F084A215E93940076D70A /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495F0849215E93940076D70A /* RoundedButton.swift */; };
+		495F084C215E9DE70076D70A /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495F084B215E9DE70076D70A /* DateExtensions.swift */; };
 		B1B223ECA305C7D9E114B9B1 /* Pods_MoviesApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B3DE94E2DB23CE6ECF6A91F /* Pods_MoviesApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		495F0845215E91AF0076D70A /* EmptyStateView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyStateView.xib; sourceTree = "<group>"; };
 		495F0847215E91CC0076D70A /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		495F0849215E93940076D70A /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		495F084B215E9DE70076D70A /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		7B3DE94E2DB23CE6ECF6A91F /* Pods_MoviesApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoviesApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF80CF04D8058BC3AFDBC52A /* Pods-MoviesApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviesApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoviesApp/Pods-MoviesApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,6 +82,7 @@
 			children = (
 				4908C173211B113900529AC1 /* UIImageView.swift */,
 				495F0849215E93940076D70A /* RoundedButton.swift */,
+				495F084B215E9DE70076D70A /* DateExtensions.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4908C176211B113900529AC1 /* UIImageView.swift in Sources */,
+				495F084C215E9DE70076D70A /* DateExtensions.swift in Sources */,
 				4908C17B211B115C00529AC1 /* MoviePresenter.swift in Sources */,
 				495F0848215E91CC0076D70A /* EmptyStateView.swift in Sources */,
 				4908C179211B114300529AC1 /* MovieRequester.swift in Sources */,
