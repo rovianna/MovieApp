@@ -44,9 +44,25 @@ extension MoviesViewController: MovieView {
         finishLoading()
     }
     
-    func setEmptyMovies() {
+    func setEmptyMovies(state: State) {
         moviesTableView.isHidden = true
+        let emptyStateView = EmptyStateView.instance
+        emptyStateView.tag = 404
+        emptyStateView.delegate = self
+        emptyStateView.configureView(error: state)
+        finishLoading()
+        self.view.addSubview(emptyStateView)
+        configure(emptyStateView)
     }
+    
+    func configure(_ view: EmptyStateView) {
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+        view.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        view.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+        view.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+    }
+    
 }
 
 extension MoviesViewController: UITableViewDataSource {
@@ -58,5 +74,12 @@ extension MoviesViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "movie", for: indexPath) as! MovieTableViewCell
         cell.configure(movie: movies[indexPath.row])
         return cell
+    }
+}
+
+extension MoviesViewController: EmptyStateViewDelegate {
+    func emptyStateView(_ emptyStateView: EmptyStateView, didTap refreshAction: UIButton) {
+        view.viewWithTag(404)?.removeFromSuperview()
+        moviePresenter.getMovies()
     }
 }

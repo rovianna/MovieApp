@@ -11,8 +11,13 @@ protocol MovieView: NSObjectProtocol {
     func startLoading()
     func finishLoading()
     func setMovies(movies: [Movie])
-    func setEmptyMovies()
+    func setEmptyMovies(state: State)
     
+}
+
+enum State {
+    case empty,
+    error
 }
 
 import UIKit
@@ -38,10 +43,10 @@ class MoviePresenter {
         movieService.getPopularMovies { [weak self] (result) in
             switch result {
             case .failure( _):
-                self?.movieView?.setEmptyMovies()
+                self?.movieView?.setEmptyMovies(state: .error)
             case .success(let data):
                 if data.isEmpty {
-                    self?.movieView?.setEmptyMovies()
+                    self?.movieView?.setEmptyMovies(state: .empty)
                 } else {
                     let movies = data.compactMap {
                         return Movie(title: $0.title, date: $0.date, poster: $0.poster)
