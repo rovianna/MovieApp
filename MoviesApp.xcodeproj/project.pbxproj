@@ -18,6 +18,9 @@
 		4959381C2117265500E9F188 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4959381B2117265500E9F188 /* Assets.xcassets */; };
 		4959381F2117265500E9F188 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4959381D2117265500E9F188 /* LaunchScreen.storyboard */; };
 		4959382C21172EAE00E9F188 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4959382B21172EAE00E9F188 /* Movie.swift */; };
+		495F0846215E91AF0076D70A /* EmptyStateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 495F0845215E91AF0076D70A /* EmptyStateView.xib */; };
+		495F0848215E91CC0076D70A /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495F0847215E91CC0076D70A /* EmptyStateView.swift */; };
+		495F084A215E93940076D70A /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495F0849215E93940076D70A /* RoundedButton.swift */; };
 		B1B223ECA305C7D9E114B9B1 /* Pods_MoviesApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B3DE94E2DB23CE6ECF6A91F /* Pods_MoviesApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +39,9 @@
 		4959381E2117265500E9F188 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		495938202117265500E9F188 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4959382B21172EAE00E9F188 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		495F0845215E91AF0076D70A /* EmptyStateView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyStateView.xib; sourceTree = "<group>"; };
+		495F0847215E91CC0076D70A /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		495F0849215E93940076D70A /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		7B3DE94E2DB23CE6ECF6A91F /* Pods_MoviesApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoviesApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF80CF04D8058BC3AFDBC52A /* Pods-MoviesApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviesApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoviesApp/Pods-MoviesApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				4908C173211B113900529AC1 /* UIImageView.swift */,
+				495F0849215E93940076D70A /* RoundedButton.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -96,6 +103,7 @@
 		4908C17D211B139600529AC1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				495F0844215E919A0076D70A /* Custom View */,
 				4908C17E211B13AC00529AC1 /* MoviesViewController.swift */,
 			);
 			path = View;
@@ -143,6 +151,15 @@
 				4959382B21172EAE00E9F188 /* Movie.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		495F0844215E919A0076D70A /* Custom View */ = {
+			isa = PBXGroup;
+			children = (
+				495F0845215E91AF0076D70A /* EmptyStateView.xib */,
+				495F0847215E91CC0076D70A /* EmptyStateView.swift */,
+			);
+			path = "Custom View";
 			sourceTree = "<group>";
 		};
 		749F768237219512FA2ACABA /* Pods */ = {
@@ -215,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4959381F2117265500E9F188 /* LaunchScreen.storyboard in Resources */,
+				495F0846215E91AF0076D70A /* EmptyStateView.xib in Resources */,
 				4959381C2117265500E9F188 /* Assets.xcassets in Resources */,
 				4908C175211B113900529AC1 /* MovieTableViewCell.xib in Resources */,
 				4959381A2117265300E9F188 /* Main.storyboard in Resources */,
@@ -271,7 +289,9 @@
 			files = (
 				4908C176211B113900529AC1 /* UIImageView.swift in Sources */,
 				4908C17B211B115C00529AC1 /* MoviePresenter.swift in Sources */,
+				495F0848215E91CC0076D70A /* EmptyStateView.swift in Sources */,
 				4908C179211B114300529AC1 /* MovieRequester.swift in Sources */,
+				495F084A215E93940076D70A /* RoundedButton.swift in Sources */,
 				4959382C21172EAE00E9F188 /* Movie.swift in Sources */,
 				495938152117265300E9F188 /* AppDelegate.swift in Sources */,
 				4908C17F211B13AC00529AC1 /* MoviesViewController.swift in Sources */,
