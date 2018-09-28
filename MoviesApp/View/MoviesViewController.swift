@@ -21,6 +21,8 @@ class MoviesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         moviesTableView.register(nib, forCellReuseIdentifier: "movie")
+        moviesTableView.estimatedRowHeight = UITableViewAutomaticDimension
+        moviesTableView.rowHeight = 120
         moviesTableView.dataSource = self
         moviePresenter.attachView(view: self)
         moviePresenter.getMovies()
